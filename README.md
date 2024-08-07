@@ -29,3 +29,34 @@ Home |
 
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+<h4 style="text-align:center;color:blue;">Contact</h4>
+<a href="index.php">Home</a> |
+Contact |
+<a href="about.php">About</a>
+<hr>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+<h4 style="text-align:center;color:blue;">About</h4>
+<a href="index.php">Home</a> |
+<a href="contact.php">Contact</a> |
+About
+<hr>
+</body>
+</html>

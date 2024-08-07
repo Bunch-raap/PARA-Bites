@@ -8,7 +8,7 @@ Nepali Cuisine
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Para Bites</title>
 <link rel="stylesheet" href="mystyles.css">
 </head>
 <body>

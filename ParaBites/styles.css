@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Space between logo/text and navigation menu */
+    align-items: center; /* Center vertically */
+    padding: 20px 50px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header .logo h1 {
+    font-size: 10em; /* Increased font size for "PARA Bites" */
+    margin: 0; /* Remove margin to eliminate spacing between logo and title */
+    color: #ff7f00; /* Optional: Add a different color to make it stand out */
+    margin-left: 10px; /* Space between logo and text */
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #e74c3c;
+    transition: background-color 0.3s ease;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    height: 500px;  /* Height of the hero section */
+    padding: 150px 20px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero {
+    position: relative;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: -1; /* Place behind the content */
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for readability */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Same shadow for clarity */
+}
+
+.hero .btn {
+    background-color: #ff7f00;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #e86f00;
+}
+
+
+
+.menu, .about, .reservations {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 100%; /* Maintain responsiveness */
+    height: 400px; /* Fixed height to keep the images uniform */
+    object-fit: cover; /* Ensures the image scales to fit the fixed dimensions without distortion */
+    border-radius: 10px;
+}
+
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.about h2, .reservations h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.booking-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Control the maximum width of the form */
+    margin: 20px auto; /* Center the form horizontally */
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form input[type="time"] {
+    width: calc(100% - 22px); /* Adjust width to account for padding and borders */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.booking-form input[type="submit"] {
+    background-color: #ff7f00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #e86f00;
+}
+
+.booking-form p#selectionMessage {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .socials a img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+footer .address {
+    text-align: right;
+}
+
+footer .address p {
+    margin-bottom: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7f00;
+}
+
+.search-section {
+    padding: 50px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.search-section form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-section input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-section .btn {
+    padding: 10px 20px;
+    background-color: #ff7f00;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-section .btn:hover {
+    background-color: #e86f00;
+}
+
+.search-results {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.search-results th, .search-results td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.search-results th {
+    background-color: #f4f4f4;
+}
+
+.navigation-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation-links .btn {
+    padding: 10px 20px;
+    background-color: #ff7f00; /* Adjust color to match theme */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.navigation-links .btn:hover {
+    background-color: #cc6600; /* Darker shade for hover */
+}

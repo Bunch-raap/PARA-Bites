@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open sans-serif', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+	margin: 0;
+}
+
+header {
+    background-color: black; /* Top header remains black */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Space between logo/text and navigation menu */
+    align-items: center; /* Center vertically */
+    padding: 20px 50px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header .logo h1 {
+    font-size: 2em; /* Adjusted font size for better visibility */
+    margin: 0; /* Remove margin to eliminate spacing between logo and title */
+    color: #be5d00; /* Optional: Add a different color to make it stand out */
+    margin-left: 10px; /* Space between logo and text */
+}
+
+nav {
+    margin-left: auto; /* Push navigation to the right side */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between the navigation items */
+}
+
+nav ul li {
+    display: inline-block; /* Ensure the nav items are inline */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px; /* Add padding for better clickable area */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover */
+}
+
+nav ul li a:hover {
+    color: #be5d00; /* Change color on hover */
+    background-color: rgba(255, 127, 0, 0.2); /* Optional: Add a background highlight on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+.hero {
+    position: relative;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: -1; /* Place behind the content */
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for readability */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Same shadow for clarity */
+}
+
+.hero .btn {
+    background-color: #be5d00;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #e86f00;
+}
+
+.menu, .about, .reservations {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 100%; /* Maintain responsiveness */
+    height: 400px; /* Fixed height to keep the images uniform */
+    object-fit: cover; /* Ensures the image scales to fit the fixed dimensions without distortion */
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.about h2, .reservations h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.booking-form {
+    background-color: white;
+    padding: 30px; /* Increase padding for more space inside the form */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Increase the width of the form */
+    max-width: 1000px; /* Increase the maximum width */
+    margin: 0px auto; /* Center the form horizontally */
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form input[type="time"],
+.booking-form input[type="number"] { /* Ensure the guest input is included */
+    width: calc(100% - 22px); /* Adjust width to account for padding and borders */
+    padding: 15px; /* Increase padding for larger input fields */
+    margin-bottom: 20px; /* Increase the margin between inputs */
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1.1em; /* Slightly increase font size */
+}
+
+.booking-form input[type="submit"] {
+    background-color: #be5d00;
+    color: white;
+    border: none;
+    padding: 15px 25px; /* Increase button size */
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #e86f00;
+}
+
+.booking-form p#selectionMessage {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+.search-section {
+    padding: 50px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.search-section form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-section input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 300px;
+    border: 2px solid #000000 ;
+    border-radius: 5px 0 0 5px;\
+	font-weight:bold
+
+}
+
+.search-section .btn {
+    padding: 10px 20px;
+    background-color: #be5d00;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-section .btn:hover {
+    background-color: #e86f00;
+}
+
+.search-results {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.search-results th, .search-results td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.search-results th {
+    background-color: #f4f4f4;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: flex-start; /* Align to the start */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+    
+    .menu-item {
+        width: 90%; /* Make menu items take up more width on mobile */
+        margin: 10px auto; /* Center them */
+    }
+}
+
+.feedback-form {
+    margin: 40px auto;
+    max-width: 600px; /* Centers the form and limits width */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light background for the form */
+}
+
+.feedback-form label {
+    font-weight: bold;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-form input[type="submit"] {
+    background-color: #be5d00; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px; /* Increased padding */
+    font-size: 1.2em; /* Increased font size */
+    cursor: pointer;
+    width: 100%; /* Full width */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.feedback-form input[type="submit"]:hover {
+    background-color: #e66e00; /* Darker on hover */
+}
+
+.feedback-list {
+    margin: 40px auto;
+    max-width: 800px; /* Centers the feedback list */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light background for feedback */
+}
+footer {
+    background-color:#eae5e0
+    padding: 40px 0px;
+    color: #be5d00; /* Text color */
+    font-family: 'Open sans-serif', sans-serif;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 1200px;
+    margin: 0 auto;
+
+    align-items: center; 
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center; /* Center align text in each section */
+    padding: 0 10px;
+}
+
+.footer-section h3 {
+    color: #be5d00; /* Matches the brownish-orange heading color */
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-section ul h4 {
+    font-size: 17px; /* Larger than h4, but smaller than h3 */
+    margin-bottom: 10px;
+    font-weight: non- italic;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    color: #be5d00;
+    line-height: 1.6;
+}
+
+/* Social Media Icons Styling */
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Align icons horizontally */
+    gap: 10px; /* Space between each icon */
+}
+
+.social-icon {
+    width: 30px; /* Uniform width */
+    height: 30px; /* Uniform height */
+    object-fit: contain; /* Maintain aspect ratio */
+    transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Phone Icon Styling */
+.icon {
+    width: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #a87b5c; /* Matches the brownish-orange button background */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #AD5F31; /* Slightly darker color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+.table1 {
+    position: relative;
+    background-image: url('table.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    align-items: center;
+	justify-content: center;
+	filter: brightness(1.6); 
+	color: black;
+    z-index: 1;
+	
+
+}
+
+.table1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay but still lets the image show through */
+    z-index: -1;
+}
+
+.food1 {
+    position: relative;
+    background-image: url('food1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    align-items: center;
+	justify-content: center;
+	filter: brightness(1.6); 
+	color: black;
+    z-index: 1;
+	display: flex;
+
+}
+
+.food1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay but still lets the image show through */
+    z-index: -1;
+}
+.food1 .btn {
+    background-color: #be5d00;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.food1 .btn:hover {
+    background-color: #e86f00;
+}
